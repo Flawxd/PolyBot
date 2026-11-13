@@ -9,6 +9,8 @@ This code is an experiment and comes with no warranty. Nothing here is financial
 
 Prediction markets are restricted or banned in a number of countries. This project was made before Polymarket got banned in France, and I do not condone any use of Polymarket. This project is here simply because I want to show it.
 
+Certain parts of the project had to be cut, and the project probably doesn't work as is at moment. I obviously cannot test it and fix it any further as it got banned in France.
+
 ## What's in the repo
 
 | Script | Market | Mode | Notes |
