@@ -1,0 +1,5 @@
+requests
+aiohttp
+python-dotenv
+web3>=7.0
+py-clob-client
