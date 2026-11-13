@@ -1,8 +1,13 @@
 # PolyBot
 
-Copy-trading bots for prediction markets. Each bot watches a list of wallets and mirrors their trades at a scaled-down size. Three of the four only simulate trades against a paper balance. The fourth places real orders on Polymarket.
+Copy-trading bots for prediction markets. Each bot watches a list of wallets and mirrors their trades at a scaled-down size and with an added risk management. Three of the four only simulate trades against a paper balance. The fourth places real orders on Polymarket.
 
-This is a personal project. Read the [disclaimer](#disclaimer) before you point anything at real money.
+## Disclaimer
+This is a personal project. Do not use it on your personal money. I am not responsible for any financial loss.
+
+This code is an experiment and comes with no warranty. Nothing here is financial advice.
+
+Prediction markets are restricted or banned in a number of countries. This project was made before Polymarket got banned in France, and I do not condone any use of Polymarket. This project is here simply because I want to show it.
 
 ## What's in the repo
 
@@ -193,12 +198,6 @@ The tests mock the CLOB client and web3, so they need no credentials and make no
 - Stop-loss sells in the live bot are written to the trade history, but their P&L is not added to the per-wallet totals in `trader_stats.json`.
 - The Azuro bot sizes bets against a fixed placeholder balance of 10,000 for the followed bettor, because the on-chain balance lookup is not implemented. Its main loop also sleeps one second at most, so `POLL_INTERVAL` has little effect.
 - The Limitless bot never closes a position and loses its state on restart. It infers buy or sell from the size of the raw amounts in the event. Check `LIMITLESS_EXCHANGE` against the current Limitless exchange contract before relying on it.
-
-## Disclaimer
-
-This code is an experiment and comes with no warranty. Nothing here is financial advice. Copying another wallet does not make its trades good ones, and the live bot can lose real money quickly. If you run it, start with an amount you can afford to lose.
-
-Prediction markets are restricted or banned in a number of countries. Polymarket blocks trading from several of them, France included, and its terms of use forbid getting around that with a VPN or a proxy. Check what applies where you live before using the live bot.
 
 ## Licence
 
